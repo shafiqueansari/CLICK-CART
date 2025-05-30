@@ -1,0 +1,21 @@
+body {
+    background-color: #fcf5f5;
+}
+
+.index_logo {
+    border-radius: 60%;
+}
+
+
+
+.category_index {
+    color: rgb(252, 246, 246);
+}
+
+.card_hover {
+    border-color: rgba(13, 110, 253, 0.7);
+    box-shadow: 0px 0px 10px 2px rgba(13, 110, 253, 0.6);
+}
+
+
+/* ____________________cart __________________________*/

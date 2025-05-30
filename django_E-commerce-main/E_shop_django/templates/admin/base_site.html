@@ -1,0 +1,164 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .module {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    }
+    .module h2 {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px 8px 0 0;
+    }
+    .module ul {
+        margin: 15px;
+    }
+    .module li {
+        padding: 8px 12px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .module li:hover {
+        background-color: #f8f9fa;
+    }
+    .module li:last-child {
+        border-bottom: none;
+    }
+    .breadcrumbs {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .breadcrumbs a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+    }
+    .submit-row input {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .submit-row input:hover {
+        background-color: #0056b3;
+    }
+    .errornote {
+        background-color: #ffebee;
+        border-left: 4px solid #ef5350;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    .success {
+        background-color: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    .warning {
+        background-color: #fff3e0;
+        border-left: 4px solid #ffa726;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    .app-list {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        padding: 20px;
+    }
+    .app-list .module {
+        margin-bottom: 20px;
+    }
+    .app-list .module h2 {
+        margin-bottom: 15px;
+    }
+    .app-list .module ul {
+        margin: 0;
+        padding: 0;
+    }
+    .app-list .module li {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .app-list .module li a {
+        display: block;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .app-list .module li a:hover {
+        background-color: #0056b3;
+    }
+    .app-list .module li a i {
+        margin-right: 8px;
+    }
+    .login {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    }
+    .login h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .login form {
+        margin-top: 20px;
+    }
+    .login input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .login .submit-row {
+        text-align: center;
+    }
+    .login .submit-row input {
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <i class="fas fa-shopping-cart"></i> E-Shop Admin
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}
+<ul class="nav navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/" target="_blank">
+            <i class="fas fa-home"></i> Visit Site
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://github.com/yourusername/eshop" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </li>
+</ul>
+{% endblock %}
